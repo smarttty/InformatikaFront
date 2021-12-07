@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button type="button" class="btn btn-outline-success my-2 my-sm-0" {{action 'save'}}>Сохранить</button>
+</nav>
+<form>
+  <div class="form-group">
+    <label>Логин</label>
+    {{input type="text" placeholder="Логин" class="form-control" value=model.login}}
+  </div>
+  <div class="form-group">
+    <label>Имя</label>
+    {{input type="text" placeholder="Имя" class="form-control" value=model.name}}
+  </div>
+  <div class="form-group">
+    <label>Пароль</label>
+    {{input type="password" placeholder="Пароль" class="form-control" value=model.password}}
+  </div>
+</form>

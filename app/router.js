@@ -10,6 +10,8 @@ Router.map(function() {
   this.route('login');
   this.route('desktop');
   this.route('user-list');
+  this.route('user', { path: 'user/:id'});
+  this.route('user-new');
 });
 
 export default Router;

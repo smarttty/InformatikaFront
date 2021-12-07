@@ -1,5 +1,15 @@
 {{#ember-table as |t|}}
     {{t.head columns=columns}}
 
-    {{t.body rows=rows}}
+    {{#t.body rows=rows as |b|}}
+      {{#b.row as |r|}}
+        {{#r.cell as |value column row|}}
+            {{#if (eq column.name "ID")}}
+                <button type="button" class="btn btn-primary" {{action "goToEditForm" value}}>Открыть</button>
+            {{else}}
+                {{value}}
+            {{/if}}
+        {{/r.cell}}
+      {{/b.row}}
+    {{/t.body}}
 {{/ember-table}}

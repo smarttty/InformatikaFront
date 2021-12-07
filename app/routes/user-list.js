@@ -18,6 +18,10 @@ export default Route.extend(authenticatedRoute, {
   setupController(controller, model) {
     controller.set('columns', [
       {
+        name: `ID`,
+        valuePath: `id`,
+      },
+      {
         name: `Логин`,
         valuePath: `login`,
       },
@@ -31,6 +35,7 @@ export default Route.extend(authenticatedRoute, {
 
     model.forEach(element => {
       rows.pushObject({
+        id: element.get('id'),
         login: element.get('login'),
         name: element.get('name')
       });
