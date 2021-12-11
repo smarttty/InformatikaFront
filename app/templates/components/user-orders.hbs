@@ -1,0 +1,5 @@
+<button type="button" class="btn btn-primary" {{action "createOrder"}}>Добавить заказ</button>
+<button type="button" class="btn btn-primary" {{action "saveOrders"}}>Сохранить заказы</button>
+{{#each orders as |order|}}
+    {{input type="text" placeholder="Наименование заказа" class="form-control" value=order.name}}
+{{/each}}
